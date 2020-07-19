@@ -1,4 +1,4 @@
-const binary_search = (arrayList = [], target = 0) => {
+const binary_search_js = (arrayList = [], target = 0) => {
   let lowest_number = 0;
   let height_number = arrayList.length - 1;
   while (height_number >= lowest_number) {
@@ -14,6 +14,6 @@ const binary_search = (arrayList = [], target = 0) => {
   return false;
 };
 
-const arrayList = [1, 3, 5, 8, 9];
+const arrayListJS = [1, 3, 5, 8, 9];
 
 console.log(binary_search(arrayList, 5));

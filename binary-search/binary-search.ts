@@ -1,6 +1,6 @@
-const arrayList: number[] = [1, 3, 4, 5, 8];
+const arrayListTS: number[] = [1, 3, 4, 5, 8];
 
-const binary_search = (numberArray: number[], target: number) => {
+const binary_search_ts = (numberArray: number[], target: number) => {
   let lowestNum: number = 0;
   let higestNum: number = numberArray.length - 1;
   while (higestNum >= lowestNum) {
@@ -15,4 +15,4 @@ const binary_search = (numberArray: number[], target: number) => {
   }
   return false;
 };
-console.log(binary_search(arrayList, 8));
+console.log(binary_search_ts(arrayListTS, 8));
