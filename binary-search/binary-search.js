@@ -5,7 +5,7 @@ const binary_search_js = (arrayList = [], target = 0) => {
     middle_number = Math.floor((lowest_number + height_number) / 2);
     if (arrayList[middle_number] === target) {
       return true;
-    } else if (target < middle_number) {
+    } else if (target < arrayList[middle_number]) {
       height_number = middle_number - 1;
     } else {
       lowest_number = middle_number + 1;

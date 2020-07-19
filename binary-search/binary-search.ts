@@ -7,7 +7,7 @@ const binary_search_ts = (numberArray: number[], target: number) => {
     let middleNum: number = Math.floor((lowestNum + higestNum) / 2);
     if (numberArray[middleNum] === target) {
       return true;
-    } else if (target < middleNum) {
+    } else if (target < numberArray[middleNum]) {
       higestNum = middleNum - 1;
     } else {
       lowestNum = middleNum + 1;
@@ -15,4 +15,4 @@ const binary_search_ts = (numberArray: number[], target: number) => {
   }
   return false;
 };
-console.log(binary_search_ts(arrayListTS, 8));
+console.log(binary_search_ts(arrayListTS, 4));
