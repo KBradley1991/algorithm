@@ -16,4 +16,4 @@ const binary_search_js = (arrayList = [], target = 0) => {
 
 const arrayListJS = [1, 3, 5, 8, 9];
 
-console.log(binary_search(arrayList, 5));
+console.log(binary_search_js(arrayListJS, 5));
