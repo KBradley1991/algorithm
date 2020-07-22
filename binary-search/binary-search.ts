@@ -15,4 +15,42 @@ const binary_search_ts = (numberArray: number[], target: number) => {
   }
   return false;
 };
+
+class binarySearch {
+  arrayList: number[];
+  heighestNumber: number;
+  lowestNumber: number;
+  target: number;
+  constructor(
+    arrayList: number[],
+    heighestNumber: number,
+    lowestNumber: number,
+    target: number
+  ) {
+    this.arrayList = [...arrayList];
+    this.heighestNumber = heighestNumber;
+    this.lowestNumber = lowestNumber;
+    this.target = target;
+  }
+
+  recBinarySearch() {
+    let middleNumber: number = Math.floor(
+      (this.lowestNumber + this.heighestNumber) / 2
+    );
+    if (this.arrayList[middleNumber] == this.target) {
+      return true;
+    } else if (this.heighestNumber < this.lowestNumber) {
+      return false;
+    } else if (this.target > this.arrayList[middleNumber]) {
+      this.lowestNumber = middleNumber + 1;
+      return this.recBinarySearch();
+    } else {
+      this.heighestNumber = middleNumber - 1;
+      return this.recBinarySearch();
+    }
+  }
+}
+
 console.log(binary_search_ts(arrayListTS, 4));
+let recSrc = new binarySearch(arrayListTS, arrayListTS.length - 1, 0, 1);
+console.log(recSrc.recBinarySearch());
